@@ -1,12 +1,16 @@
+import Moment from 'react-moment';
+
 import './ExpenseItem.css';
 
-function ExpenseItem() {
+function ExpenseItem(props) {
+  const {date, title, amount} = props
+
   return (
     <div className='expense-item'>
-      <div>March 28th 2021</div>
+      <div><Moment date={date} format="MMMM DD, YYYY" /></div>
       <div className='expense-item__description'>
-        <h2>Car Insurance</h2>
-        <div className='expense-item__price'>$294.94</div>
+        <h2>{title}</h2>
+        <div className='expense-item__price'>${amount.toFixed(2)}</div>
       </div>
     </div>
   );
