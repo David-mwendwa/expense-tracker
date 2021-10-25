@@ -1,7 +1,7 @@
 import Moment from 'react-moment';
 import './ExpenseDate.css';
 
-function ExpenseDate({ date }) {
+const ExpenseDate = ({ date }) => {
   let year = <Moment date={date} format='YYYY' />;
   let month = <Moment date={date} format='MMMM' />;
   let day = <Moment date={date} format='DD' />;
