@@ -1,14 +1,15 @@
 import React from 'react';
+import Card from '../UI/Card';
 import ExpenseItem from './ExpenseItem';
 import './Expenses.css';
 
 function Expenses({ expenses }) {
   return (
-    <div className='expenses'>
+    <Card className='expenses'>
       {expenses.map((expense) => (
         <ExpenseItem key={expense.id} {...expense} />
       ))}
-    </div>
+    </Card>
   );
 }
 
