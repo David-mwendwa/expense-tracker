@@ -13,8 +13,15 @@ const Expenses = ({ expenses }) => {
   };
 
   const filteredExpenses = expenses.filter((expense) => {
+    // console.log(expense)
+    // console.log(expense.date)
+    // console.log(expense.date.getFullYear());
+    // console.log(expense.date.getFullYear().toString());
+    // console.log(filteredYear)
+    // return 2021
     return expense.date.getFullYear().toString() === filteredYear;
   });
+  console.log('filtered ex',filteredExpenses)
 
   return (
     <Card className='expenses'>
